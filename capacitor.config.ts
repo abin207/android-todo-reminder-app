@@ -11,9 +11,9 @@ import type { CapacitorConfig } from "@capacitor/cli";
  * remains fully usable when that origin is unreachable.
  */
 const config: CapacitorConfig = {
-  appId: "com.private.todoreminder",
+  appId: "com.mytodo.todoreminder",
   appName: "Todo & Reminders",
-  webDir: "public",
+  webDir: "dist",
   android: {
     allowMixedContent: false,
   },
