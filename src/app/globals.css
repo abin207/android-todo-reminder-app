@@ -61,3 +61,10 @@ html.dark body {
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+/* Hide Next.js dev watermark / indicator */
+nextjs-portal,
+[data-nextjs-dev-indicator],
+[data-next-badge] {
+  display: none !important;
+}
