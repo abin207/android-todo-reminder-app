@@ -56,6 +56,7 @@ export function AppShell() {
     finishTask,
     reopen,
     removeTask,
+    updateSettings,
     requestPermission,
     permission,
   } = useAppState();
@@ -64,6 +65,19 @@ export function AppShell() {
   const [formOpen, setFormOpen] = useState(false);
   const [editing, setEditing] = useState<LocalTask | null>(null);
   const [viewing, setViewing] = useState<LocalTask | null>(null);
+
+  const isDark =
+    settings.theme === "dark" ||
+    (settings.theme === "system" &&
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches);
+
+  const toggleTheme = () => {
+    updateSettings({
+      ...settings,
+      theme: settings.theme === "light" ? "dark" : "light"
+    });
+  };
 
   useThemeEffect(settings.theme);
 
@@ -110,7 +124,8 @@ export function AppShell() {
             onToggle={handleToggle}
             onOpen={openDetails}
             onAdd={openCreate}
-            onSettings={() => setTab("settings")}
+            onToggleTheme={toggleTheme}
+            isDark={isDark}
             onNotifications={() => void requestPermission()}
             permissionGranted={permission === "granted"}
           />

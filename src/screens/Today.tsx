@@ -6,14 +6,15 @@ import { EmptyState, TipCard } from "@/components/EmptyState";
 import { TaskList } from "@/components/TaskList";
 import { buildTodayBuckets } from "@/utils/taskGrouping";
 import { formatGreetingDate, greetingFor, todayString } from "@/utils/datetime";
-import { IconBell, IconGear, IconPlus } from "@/components/Icons";
+import { IconBell, IconGear, IconPlus, IconSun, IconMoon } from "@/components/Icons";
 
 interface Props {
   tasks: LocalTask[];
   onToggle: (id: string) => void;
   onOpen: (task: LocalTask) => void;
   onAdd: () => void;
-  onSettings: () => void;
+  onToggleTheme: () => void;
+  isDark: boolean;
   onNotifications: () => void;
   permissionGranted: boolean;
 }
@@ -25,7 +26,8 @@ export function TodayPage({
   onToggle,
   onOpen,
   onAdd,
-  onSettings,
+  onToggleTheme,
+  isDark,
   onNotifications,
   permissionGranted,
 }: Props) {
@@ -73,11 +75,11 @@ export function TodayPage({
           </button>
           <button
             type="button"
-            onClick={onSettings}
-            aria-label="Settings"
+            onClick={onToggleTheme}
+            aria-label="Toggle Theme"
             className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#1B2340] shadow-[0_4px_14px_rgba(28,41,72,0.08)] dark:bg-[#1b2238] dark:text-slate-100"
           >
-            <IconGear size={18} />
+            {isDark ? <IconSun size={18} /> : <IconMoon size={18} />}
           </button>
         </div>
       </header>

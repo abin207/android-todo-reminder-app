@@ -249,7 +249,7 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
         const saved = await saveSettings(next);
         setSettings(saved);
         await refreshFrom(saved);
-      }, "Settings saved");
+      });
     },
     [refreshFrom, withErrors],
   );
