@@ -1,0 +1,16 @@
+node_modules/
+.next/
+out/
+build/
+dist/
+*.tsbuildinfo
+
+# Secrets — never commit
+.env
+.env.local
+.env.*.local
+
+# Capacitor / Android
+android/
+ios/
+.DS_Store

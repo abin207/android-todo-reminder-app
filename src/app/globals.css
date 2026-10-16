@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+/* Tailwind v4: enable class-based dark mode driven by the Appearance setting. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+html,
+body {
+  overscroll-behavior-y: none;
+}
+
+body {
+  font-family: var(--font-sans), "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  background: #eef2fa;
+  color: #1b2340;
+}
+
+.dark body,
+html.dark body {
+  background: #0f1424;
+  color: #f8fafc;
+}
+
+.field-input {
+  width: 100%;
+  border: 0;
+  border-radius: 18px;
+  background: #f4f6fb;
+  padding: 14px 16px;
+  font-size: 15px;
+  color: #1b2340;
+  outline: none;
+  box-shadow: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.field-input::placeholder {
+  color: #b0b7c8;
+}
+
+.dark .field-input {
+  background: #1b2238;
+  color: #f8fafc;
+}
+
+.field-input:focus {
+  background: #ffffff;
+  box-shadow: 0 0 0 2px rgba(79, 124, 255, 0.28);
+}
+
+.dark .field-input:focus {
+  background: #222a44;
+  box-shadow: 0 0 0 2px rgba(79, 124, 255, 0.45);
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
