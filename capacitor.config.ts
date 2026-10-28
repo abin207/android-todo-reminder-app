@@ -12,7 +12,7 @@ import type { CapacitorConfig } from "@capacitor/cli";
  */
 const config: CapacitorConfig = {
   appId: "com.mytodo.todoreminder",
-  appName: "Todo & Reminders",
+  appName: "MyTodo",
   webDir: "dist",
   android: {
     allowMixedContent: false,

@@ -317,7 +317,7 @@ export function SettingsPage() {
       </Section>
 
       <p className="px-1 text-center text-[12px] text-[#8B93A7]">
-        Todo & Reminders · v{APP_VERSION}
+        MyTodo · v{APP_VERSION}
       </p>
     </div>
   );

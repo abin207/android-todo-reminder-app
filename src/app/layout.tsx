@@ -10,9 +10,9 @@ const sans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Todo & Reminders",
+  title: "MyTodo",
   description: "Private, offline-first todo and reminder app.",
-  applicationName: "Todo & Reminders",
+  applicationName: "MyTodo",
 };
 
 export const viewport: Viewport = {
