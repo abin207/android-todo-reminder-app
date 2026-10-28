@@ -1,7 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-  <rect width="32" height="32" rx="7" fill="#ffffff"/>
+  <!-- Dark background -->
+  <rect width="32" height="32" rx="7" fill="#1a1a1a"/>
   <!-- Circle part of "d" -->
-  <circle cx="13.5" cy="19" r="6.5" fill="none" stroke="#AAEE00" stroke-width="3.2" stroke-linecap="round"/>
+  <circle cx="13" cy="19" r="7" fill="none" stroke="#BFEE00" stroke-width="3" stroke-linecap="round"/>
   <!-- Vertical stem of "d" -->
-  <line x1="20" y1="7" x2="20" y2="19" stroke="#AAEE00" stroke-width="3.2" stroke-linecap="round"/>
+  <line x1="20" y1="6.5" x2="20" y2="19" stroke="#BFEE00" stroke-width="3" stroke-linecap="round"/>
+  <!-- Clock hour hand (pointing up ~12 o'clock) -->
+  <line x1="13" y1="19" x2="13" y2="15" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+  <!-- Clock minute hand (pointing right ~3 o'clock) -->
+  <line x1="13" y1="19" x2="16.5" y2="21.5" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
 </svg>
